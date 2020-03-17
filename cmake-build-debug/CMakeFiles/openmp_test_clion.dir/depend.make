@@ -3,14 +3,14 @@
 
 CMakeFiles/openmp_test_clion.dir/bitonic.cpp.o: ../bitonic.cpp
 
+CMakeFiles/openmp_test_clion.dir/brick.cpp.o: ../brick.cpp
+
+CMakeFiles/openmp_test_clion.dir/main.cpp.o: ../brick.hpp
 CMakeFiles/openmp_test_clion.dir/main.cpp.o: ../main.cpp
-CMakeFiles/openmp_test_clion.dir/main.cpp.o: ../sorts.hpp
 
 CMakeFiles/openmp_test_clion.dir/merge.cpp.o: ../merge.cpp
 
 CMakeFiles/openmp_test_clion.dir/quick.cpp.o: ../quick.cpp
 
 CMakeFiles/openmp_test_clion.dir/radix.cpp.o: ../radix.cpp
-
-CMakeFiles/openmp_test_clion.dir/sorts.cpp.o: ../sorts.cpp
 

@@ -8,7 +8,7 @@ int main(){
         std::cout << arr[i]  << ", ";
     }
     std::cout << "\n";
-    switch(0){
+    switch(3){
         default:
         case 0: brickSort   (arr,10); break; //complete
         case 1: mergeSort   (arr,10); break;
