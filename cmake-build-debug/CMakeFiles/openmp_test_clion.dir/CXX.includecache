@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/suhas/CLionProjects/untitled/bitonic.cpp
+
+/mnt/c/Users/suhas/CLionProjects/untitled/main.cpp
+iostream
+-
+sorts.hpp
+/mnt/c/Users/suhas/CLionProjects/untitled/sorts.hpp
+
+/mnt/c/Users/suhas/CLionProjects/untitled/merge.cpp
+
+/mnt/c/Users/suhas/CLionProjects/untitled/quick.cpp
+
+/mnt/c/Users/suhas/CLionProjects/untitled/radix.cpp
+
+/mnt/c/Users/suhas/CLionProjects/untitled/sorts.cpp
+
+/mnt/c/Users/suhas/CLionProjects/untitled/sorts.hpp
+
