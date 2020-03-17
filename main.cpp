@@ -13,7 +13,7 @@ int main(){
         case 0: brickSort   (arr,10); break; //complete
         case 1: mergeSort   (arr,10); break;
         case 2: quickSort   (arr,10); break;
-        case 3: radixSort   (arr,10); break;
+        case 3: radixSort   (arr,10); break; //WIP suhas
         case 4: bitonicSort (arr,10); break;
     }
     for(int i = 0; i<10; i++){
