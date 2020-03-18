@@ -36,7 +36,7 @@ void parallelFilter(int64_t*arr,int64_t*out,int64_t len, int64_t bit, int64_t va
     //generate flag array to pass into parallel prefix
     #pragma omp parallel for //todo segfaults here for 2^n where n>17
     for (int64_t i = 0; i < len; i++) {
-        flag[i] = arr[i];//(((arr[i] & bitPos) && 1) == value);
+        flag[i] = (((arr[i] & bitPos) && 1) == value);
     }
     prefixSum(flag, len);
     if (flag[0] == 1) out[0] = arr[0];

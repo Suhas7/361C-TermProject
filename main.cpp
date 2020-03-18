@@ -2,8 +2,8 @@
 #include <ctime>
 #include "brick.hpp"
 int main(){
-    int64_t length = 1<<18;
-    int64_t iterations=1;
+    int64_t length = 1;
+    int64_t iterations=17;
     int64_t factor=2;
     for(int64_t i = 0; i<iterations; i++) {
         int64_t arr[length];
