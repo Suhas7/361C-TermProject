@@ -15,6 +15,22 @@ void filter(int*arr,int*out,int len, int bit, int value, int* x){
     if(value==0) *x=idx;
 }
 
+void parallelFilter(int*arr,int*out,int len, int bit, int value, int* x) {
+    int flag[len];
+    int bitPos = (1 << bit);
+    //generate flag array to pass into parallel prefix
+    #pragma omp parallel for
+    for (int i = 0; i < len; i++) {
+        flag[i] = (((arr[i] & bitPos) && 1) == value);
+    }
+    //run prefix sum
+    ///prefixSum(flag);
+    if (flag[0] == 1) out[0] = arr[0];
+    #pragma omp parallel for
+    for (int i = 1; i < len; i++) {
+        if (flag[i] != flag[i - 1]) out[flag[i]] = arr[i];
+    }
+}
 void merge(int* out, int* a,int* b,int lenA, int lenB){
     #pragma omp parallel for
     for(int i = 0; i<lenA+lenB; i++){
