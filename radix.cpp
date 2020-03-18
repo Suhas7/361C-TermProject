@@ -7,7 +7,7 @@ void filter(int*arr,int*out,int len, int bit, int value, int* x){
     //applies modified parallel prefix sum to find # preceding elements that meet criteria
     for(int i=0; i<len; i++){
         //find  based on each value on (val&bitPos>=<0)
-        if((arr[i]&bitPos)==value){
+        if(((arr[i]&bitPos)&&1)==value){
             out[idx]=arr[i];
             idx++;
         }
@@ -23,7 +23,7 @@ void merge(int* out, int* a,int* b,int lenA, int lenB){
     }
 }
 
-int* radixIter(int* arr, int len, int  bit){
+void radixIter(int* arr, int len, int  bit){
     int x=0;
     int low[len];
     int high[len];
@@ -37,7 +37,7 @@ void radixSort(int arr[], int n){
     bool sorted = false; // flag until no swaps are needed
     int currArr[n];
     for(int i=0;i<n;i++)currArr[i]=arr[i];
-    for(int i = 0; i<30;i++){
+    for(int i = 0; i<5;i++){
         radixIter(currArr,n,i);
     }
     for(int i=0;i<n;i++)arr[i]=currArr[i];
