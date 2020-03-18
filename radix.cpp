@@ -1,10 +1,7 @@
 
-//todo: this function, then radix is done
 void filter(int*arr,int*out,int len, int bit, int value, int* x){
     int idx=0;
     int bitPos=(1<<bit);
-    //todo use parallel prefix to do this, currently not parallelizable due to shared index
-    //applies modified parallel prefix sum to find # preceding elements that meet criteria
     for(int i=0; i<len; i++){
         //find  based on each value on (val&bitPos>=<0)
         if(((arr[i]&bitPos)&&1)==value){
@@ -23,7 +20,7 @@ void parallelFilter(int*arr,int*out,int len, int bit, int value, int* x) {
     for (int i = 0; i < len; i++) {
         flag[i] = (((arr[i] & bitPos) && 1) == value);
     }
-    //run prefix sum
+    //todo run prefix sum
     ///prefixSum(flag);
     if (flag[0] == 1) out[0] = arr[0];
     #pragma omp parallel for
