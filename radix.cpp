@@ -1,9 +1,7 @@
-
 void filter(int*arr,int*out,int len, int bit, int value, int* x){
     int idx=0;
     int bitPos=(1<<bit);
     for(int i=0; i<len; i++){
-        //find  based on each value on (val&bitPos>=<0)
         if(((arr[i]&bitPos)&&1)==value){
             out[idx]=arr[i];
             idx++;
@@ -12,9 +10,8 @@ void filter(int*arr,int*out,int len, int bit, int value, int* x){
     if(value==0) *x=idx;
 }
 
-
-//todo this function
 void prefixSum(int* arr,int len){
+    //midterm one q4 referenced
     int d=1;
     int out[len];
     while(d<len){
