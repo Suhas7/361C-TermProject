@@ -1,4 +1,4 @@
-#include "common.hpp"
+#include "common.h"
 
 void bitonicSort(int arr[], int n){
     bool sorted = false; // flag until no swaps are needed

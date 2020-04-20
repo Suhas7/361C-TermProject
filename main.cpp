@@ -1,7 +1,9 @@
-#include "common.hpp"
+#include "common.h"
+
+using namespace std;
 
 int main(){
-    int length = 1;
+    /*int length = 1;
     int iterations=17;
     int factor=2;
     for(int i = 0; i<iterations; i++) {
@@ -23,6 +25,8 @@ int main(){
                 std::cout << "fucc\n";
         }
         length*=factor;
-    }
+    }*/
+
+    cout << "Made it";
     return 0;
 }
