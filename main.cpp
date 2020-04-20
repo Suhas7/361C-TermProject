@@ -1,14 +1,13 @@
-#include <iostream>
-#include <ctime>
-#include "brick.hpp"
+#include "common.hpp"
+
 int main(){
-    int64_t length = 1;
-    int64_t iterations=17;
-    int64_t factor=2;
-    for(int64_t i = 0; i<iterations; i++) {
-        int64_t arr[length];
+    int length = 1;
+    int iterations=17;
+    int factor=2;
+    for(int i = 0; i<iterations; i++) {
+        int arr[length];
         #pragma omp parallel for
-        for (int64_t i = 0; i < length; i++) { arr[i] = length - 1 - i; }
+        for (int i = 0; i < length; i++) { arr[i] = length - 1 - i; }
         clock_t time_req = clock();
         switch (1) {
             default:
@@ -19,7 +18,7 @@ int main(){
             case 4: bitonicSort (arr, length); break;
         }
         std::cout <<(float) (clock()-time_req)/CLOCKS_PER_SEC << "\n";
-        for (int64_t i = 0; i < length; i++) {
+        for (int i = 0; i < length; i++) {
             if(arr[i]!=i)
                 std::cout << "fucc\n";
         }

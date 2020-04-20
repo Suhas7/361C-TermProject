@@ -1,3 +1,5 @@
+#include "common.hpp"
+
 void brickSort(int arr[], int n){
     bool sorted = false; // flag until no swaps are needed
     while (!sorted){

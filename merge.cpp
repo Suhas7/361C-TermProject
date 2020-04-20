@@ -1,3 +1,5 @@
+#include "common.hpp"
+
 void mergeSort(int arr[], int n){
     bool sorted = false; // flag until no swaps are needed
     while (!sorted){

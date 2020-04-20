@@ -1,4 +1,4 @@
-#include <cstdint>
+#include "common.h"
 
 void filter(int64_t*arr, int64_t*out, int64_t len, int64_t bit, int64_t value, int64_t* x){
     int64_t idx=0;
