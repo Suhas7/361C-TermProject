@@ -12,9 +12,12 @@ void merge(int arr[], int left, int mid, int right) {
     int left_array[num_left];
     int right_array[num_right];
 
+#pragma omp for
     for (int i = left; i <= mid; i++) {
 	left_array[i - left] = arr[i];
     }
+
+#pragma omp for
     for (int i = mid + 1; i <= right; i++) {
 	right_array[i - mid - 1] = arr[i];
     }
@@ -48,8 +51,10 @@ void merge(int arr[], int left, int mid, int right) {
 }
 
 void mergeSort(int arr[], int n){
-    for (int size = 1; size < n; size *= 2) {
+    omp_set_num_threads(NUM_THREADS);
 
+    for (int size = 1; size < n; size *= 2) {
+#pragma omp for
 	for (int left = 0; left < n-1; left += size * 2) {
 	    int mid = min (left + size - 1, n-1);
 	    int end = min (left + 2 * size - 1, n-1);
