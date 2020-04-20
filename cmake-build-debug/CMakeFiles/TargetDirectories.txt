@@ -1,3 +1,0 @@
-/mnt/c/Users/suhas/CLionProjects/untitled/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/c/Users/suhas/CLionProjects/untitled/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/suhas/CLionProjects/untitled/cmake-build-debug/CMakeFiles/openmp_test_clion.dir
