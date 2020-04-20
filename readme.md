@@ -7,4 +7,4 @@
 2. to run: ./termProject <filename.txt> <number of elements in file> <type of sort>
 
 Note: in the input file follow the format: 1, 2, 3, 5. 
-      the type of sort should be in this set: {brickSort, radixSort, mergeSort, quickSort, bitonicSort}
+      the type of sort should be in this set: {brick, radix, merge, quick, bitonic}

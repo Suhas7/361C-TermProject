@@ -7,7 +7,7 @@ using namespace std;
 int main(int argc, char *argv[]){
     //Read the input file
 
-    char* fileName = argv[1];
+    string fileName = argv[1];
     stringstream len_s(argv[2]);
     string type = argv[3];
 
@@ -18,9 +18,9 @@ int main(int argc, char *argv[]){
 
     len_s >> len;
     
-    ifstream myfile(fileName);
-    if (myfile.is_open()) {
-	getline(myfile, buff);
+    ifstream infile(fileName.c_str());
+    if (infile.is_open()) {
+	getline(infile, buff);
     }
     else {
         cout << "Unable to open file";
@@ -31,28 +31,29 @@ int main(int argc, char *argv[]){
 	buff.erase(0, buff.find(delimiter) + delimiter.length());
 	token >> arr[i];
     }
+    infile.close();
 
     //Start the sorting algorithms. 
     clock_t time_req = clock();
 
-    if (!type.compare("brickSort")) {
+    if (!type.compare("brick")) {
 	time_req = clock();
 	brickSort(arr, len);
     }
-    else if (!type.compare("radixSort")) {
+    else if (!type.compare("radix")) {
 
 	time_req = clock();
 	radixSort(arr, len);
     }
-    else if (!type.compare("mergeSort")) {
+    else if (!type.compare("merge")) {
 	time_req = clock();
 	mergeSort(arr, len);
     }
-    else if (!type.compare("quickSort")) {
+    else if (!type.compare("quick")) {
 	time_req = clock();
 	quickSort(arr, len);
     }
-    else if (!type.compare("bitonicSort")) {
+    else if (!type.compare("bitonic")) {
 	time_req = clock();
 	bitonicSort(arr, len);
     }
@@ -62,7 +63,25 @@ int main(int argc, char *argv[]){
 
 
     // Print the execution time    
-    cout << (float) (clock() - time_req) / CLOCKS_PER_SEC << "\n";
+    cout << "Time taken is: " << (float) (clock() - time_req) / CLOCKS_PER_SEC << " seconds." << endl;
+
+    //Output final array to file
+    string ans = "";
+    for (int i = 0; i < len; i++) {
+	stringstream int_s;
+	int_s << arr[i];	
+	ans.append(int_s.str());
+
+	if (i != len - 1) {
+	    ans.append(", ");
+	}
+    }
+    
+    string prefix = "out_";
+    type = prefix.append(type.append(".txt"));
+    ofstream outfile(type.c_str());
+    outfile << ans;
+    outfile.close();
 
     return 0;
 }
