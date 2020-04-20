@@ -3,6 +3,8 @@
 #include <omp.h>
 #include <fstream>
 
+#define NUM_THREADS 10
+
 void brickSort(int arr[], int n);
 void quickSort(int arr[], int n);
 void mergeSort(int arr[], int n);
