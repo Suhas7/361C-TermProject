@@ -64,6 +64,7 @@ void radixIter(int* arr, int len, int  bit){
 }
 
 void radixSort(int arr[], int n){
+    omp_set_num_threads(NUM_THREADS);
     bool sorted = false; // flag until no swaps are needed
     for(int i = 0; i<64;i++){
         radixIter(arr,n,i);

@@ -1,6 +1,8 @@
 #include "common.h"
 
 void brickSort(int arr[], int n){
+    omp_set_num_threads(NUM_THREADS);
+
     bool sorted = false; // flag until no swaps are needed
     while (!sorted){
         sorted = true;
