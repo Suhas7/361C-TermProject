@@ -1,27 +1,46 @@
 #include "common.h"
+#include <cstring>
+#include <limits.h>
+
+using namespace std;
 
 void bitonicSort(int arr[], int n){
     omp_set_num_threads(NUM_THREADS);
-    bool sorted = false; // flag until no swaps are needed
-    while (!sorted){
-        sorted = true;
-#pragma omp parallel for //across all even elem pairs
-        for (int i=0; i<=n-2; i+=2){ //for each even pair
-            if (arr[i] > arr[i+1]){ //swap if needed
-                int x=arr[i];
-                arr[i]=arr[i+1];
-                arr[i+1]=x;
-                sorted = false; //mark flag to denote unclean iteration
-            }
-        }
-#pragma omp parallel for //across all odd elem pairs
-        for (int i=1; i<=n-2; i+=2){
-            if (arr[i] > arr[i+1]){ //swap if needed
-                int x=arr[i];
-                arr[i]=arr[i+1];
-                arr[i+1]=x;
-                sorted = false; //mark flag to denote unclean iteration
-            }
-        }
+
+    int N = 1;
+    while (N < n) {
+	N *= 2;
     }
+
+    int tmp[N];
+    memcpy(tmp, arr, sizeof(int) * n);
+   
+    for (int i = n; i < N; i++) {
+	tmp[i] = INT_MAX;
+    }
+    
+    for (int i = 2; i <= N; i *= 2) {
+	for (int j = i; j > 1; j /= 2) {
+#pragma omp parallel for schedule(static)
+	    for (int k = 0; k < N; k += j) {
+	    	int index = (k / i);
+		bool ascending = true;
+		if (index % 2 == 1) {
+		    ascending = false;
+		}
+
+		for (int l = k; l < k + (j / 2); l++) {
+		    if (ascending == (tmp[l] >= tmp[l + j/2])) {
+			int foo = tmp[l];
+			tmp[l] = tmp[l + j/2];
+			tmp[l + j/2] = foo;
+		    }
+		}
+	    }
+	}
+    }
+
+
+
+    memcpy(arr, tmp, sizeof(int) * n);
 }

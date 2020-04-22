@@ -3,7 +3,7 @@
 #include <omp.h>
 #include <fstream>
 
-#define NUM_THREADS 10
+#define NUM_THREADS 8
 
 void brickSort(int arr[], int n);
 void quickSort(int arr[], int n);
