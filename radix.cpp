@@ -33,8 +33,8 @@ void prefixSum(int* arr,int len){
 void parallelFilter(int*arr,int*out,int len, int bit, int value, int* x) {
     int flag[len];
     int bitPos = (1 << bit);
-    //generate flag array to pass into parallel prefix
-    #pragma omp parallel for //todo segfaults here for 2^n where n>17
+    
+    #pragma omp parallel for
     for (int i = 0; i < len; i++) {
         flag[i] = (((arr[i] & bitPos) && 1) == value);
     }
@@ -65,8 +65,8 @@ void radixIter(int* arr, int len, int  bit){
 
 void radixSort(int arr[], int n){
     omp_set_num_threads(NUM_THREADS);
-    bool sorted = false; // flag until no swaps are needed
-    for(int i = 0; i<64;i++){
+
+    for(int i = 0; i < 32;i++){
         radixIter(arr,n,i);
     }
 }

@@ -98,7 +98,7 @@ int main(int argc, char *argv[]){
     outfile.close();
 
     for (int i = 0; i < len-1; i++) {
-	if(arr[i] > arr[i+1]) cout << "Fuck" << endl; 
+	if(arr[i] > arr[i+1]) cout << "ERROR" << endl; 
     }
     return 0;
 }
