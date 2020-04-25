@@ -10,5 +10,5 @@ merge.o: merge.cpp common.h
 	g++ -c -fopenmp merge.cpp
 quick.o: quick.cpp common.h
 	g++ -c -fopenmp quick.cpp
-radic.o: radix.cpp common.h
+radix.o: radix.cpp common.h
 	g++ -c -fopenmp radix.cpp

@@ -21,7 +21,7 @@ void bitonicSort(int arr[], int n){
     
     for (int i = 2; i <= N; i *= 2) {
 	for (int j = i; j > 1; j /= 2) {
-#pragma omp parallel for schedule(static)
+	    #pragma omp parallel for schedule(static)
 	    for (int k = 0; k < N; k += j) {
 	    	int index = (k / i);
 		bool ascending = true;

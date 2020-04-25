@@ -50,7 +50,7 @@ void mergeSort(int arr[], int n){
     omp_set_num_threads(NUM_THREADS);
 
     for (int size = 1; size < n; size *= 2) {
-#pragma omp parallel for
+	#pragma omp parallel for
 	for (int left = 0; left < n-1; left += size * 2) {
 	    int mid = min (left + size - 1, n-1);
 	    int end = min (left + 2 * size - 1, n-1);
