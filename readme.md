@@ -16,3 +16,10 @@ Note: in the input file follow the format: 1, 2, 3, 5.
 ![Performance on increasingly sized datasets](/bricksorting.png)
 
 As the size of the dataset doubles, our runtime approximately doubles for each algorithm while running 8 threads, indicating a near linear time complexity.
+
+
+![Performance as threads increase](/sort150.png)
+
+![Performance as threads increase](/bricksort150.png)
+
+As the number of threads increases, the runtime for sorting decreases.
