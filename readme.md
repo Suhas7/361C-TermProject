@@ -1,17 +1,25 @@
 # EE361C Term Project: CPU Parallel Sorting Implementations
 ## Suhas Raja, Matthew Jones, Matthew Golla, Alan Penichet
 
-# Instructions
+## Instructions
 
 1. call "make" in the command line
 2. to run: ./termProject <filename.txt>  {type of sort}
+3. output files will be in "outputs"
 
-The type of sort should be in this set: {brick, radix, merge, quick, bitonic}
-The number of threads is defined in common.h
+### Example
 
-Note: in the input file follow the format: 1, 2, 3, 5, ... , n
+./termProject inputs/test_50000.txt radix
 
-# Graphs
+The output file will be called "out_radix_50000.txt"
+
+### Reminders
+- The type of sort should be in this set: {brick, radix, merge, quick, bitonic}
+- The number of threads is defined in common.h
+- In the input file follow the format: 1, 2, 3, 5, ... , n
+- For the input file, make sure to include the path to the file if it is in a folder
+
+## Graphs
 
 ![Performance on increasingly sized datasets](/graphs/8threadsorting.png)
 
