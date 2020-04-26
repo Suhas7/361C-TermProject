@@ -18,6 +18,7 @@ The output file will be called "out_radix_50000.txt"
 - The number of threads is defined in common.h
 - In the input file follow the format: 1, 2, 3, 5, ... , n
 - For the input file, make sure to include the path to the file if it is in a folder
+- There is a Python script that can be used to generate input files
 
 ## Graphs
 
