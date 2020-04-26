@@ -91,8 +91,11 @@ int main(int argc, char *argv[]){
 	}
     }
     
-    string prefix = "out_";
-    type = prefix.append(type.append(".txt"));
+    stringstream len_s;
+    len_s << len;
+
+    string prefix = "outputs/out_";
+    type = prefix.append(type.append("_").append(len_s.str()).append(".txt"));
     ofstream outfile(type.c_str());
     outfile << ans;
     outfile.close();
