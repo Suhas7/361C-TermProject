@@ -22,6 +22,8 @@ The output file will be called "out_radix_50000.txt"
 
 ## Graphs
 
+Note: Each plotted time is the average of 5 executions.
+
 ![Performance on increasingly sized datasets](/graphs/8threadsorting.png)
 
 ![Performance on increasingly sized datasets](/graphs/bricksorting.png)
