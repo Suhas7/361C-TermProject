@@ -11,5 +11,8 @@ The number of threads is defined in common.h
 
 Note: in the input file follow the format: 1, 2, 3, 5. 
 
+![Performance on increasingly sized datasets](/8threadsorting.png)
 
-![Performance on increasing sized datasets](/8threadsorting.png)
+![Performance on increasingly sized datasets](/bricksorting.png)
+
+As the size of the dataset doubles, our runtime approximately doubles for each algorithm while running 8 threads, indicating a near linear time complexity.
