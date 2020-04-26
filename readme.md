@@ -10,3 +10,6 @@ The type of sort should be in this set: {brick, radix, merge, quick, bitonic}
 The number of threads is defined in common.h
 
 Note: in the input file follow the format: 1, 2, 3, 5. 
+
+
+![Performance on increasing sized datasets](/8threadsorting.png)
