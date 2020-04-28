@@ -46,11 +46,15 @@ Note: Each plotted time is the average of 5 executions.
 
 ![Performance on increasingly sized datasets](/graphs/bricksorting.png)
 
+Red: Bitonic, Green: Merge, Orange: Quick, Black: Radix, Purple: Brick
+
 As the size of the dataset doubles, our runtime approximately doubles for each algorithm while running 8 threads, indicating a near linear time complexity.
 
 
 ![Performance as threads increase](/graphs/sort150.png)
 
 ![Performance as threads increase](/graphs/bricksort150.png)
+
+Red: Bitonic, Green: Merge, Orange: Quick, Black: Radix, Purple: Brick
 
 As the number of threads increases, the runtime for sorting decreases.
