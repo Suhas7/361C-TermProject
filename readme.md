@@ -48,7 +48,7 @@ Note: Each plotted time is the average of 5 executions.
 
 Red: Bitonic, Green: Merge, Orange: Quick, Black: Radix, Purple: Brick
 
-As the size of the dataset doubles, our runtime approximately doubles for each algorithm while running 8 threads, indicating a near linear time complexity.
+As the size of the dataset doubles, our runtime approximately doubles for Bitonic, Merge, Quick, Radix while running 8 threads, indicating a near linear time complexity. For brick sort, the line appears to be nonlinear, indicating a nonlinear time complexity.
 
 
 ![Performance as threads increase](/graphs/sort150.png)
