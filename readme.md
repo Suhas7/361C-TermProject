@@ -40,7 +40,7 @@ Quick sort is a divide and conquer algorithm that uses pivots. A pivot is just a
 
 ## Graphs
 
-Note: Each plotted time is the average of 5 executions of the code on the ECE Kamek Virtual Machine.
+Note: Each plotted time is the average of 5 executions of the code on the ECE Kamek Virtual Machine. Also, Brick sort is graphed separately as it takes significantly more time than the other sorts. 
 
 ### Performance as Dataset Size Increases for Bitonic, Merge, Quick, and Radix Sorts
 ![Performance on increasingly sized datasets](/graphs/8threadsorting.png)
