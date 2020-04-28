@@ -40,7 +40,7 @@ Quick sort is a divide and conquer algorithm that uses pivots. A pivot is just a
 
 ## Graphs
 
-Note: Each plotted time is the average of 5 executions.
+Note: Each plotted time is the average of 5 executions of the code on the ECE Linux Virtual Machines.
 
 ![Performance on increasingly sized datasets](/graphs/8threadsorting.png)
 
@@ -57,4 +57,4 @@ As the size of the dataset doubles, our runtime approximately doubles for Bitoni
 
 Red: Bitonic, Green: Merge, Orange: Quick, Black: Radix, Purple: Brick
 
-As the number of threads increases, the runtime for sorting decreases.
+As the number of threads increases, the runtime for sorting decreases, but with diminishing returns.
