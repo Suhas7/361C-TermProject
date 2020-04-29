@@ -43,13 +43,13 @@ Quick sort is a divide and conquer algorithm that uses pivots. A pivot is just a
 
 Note: Each plotted time is the average of 5 executions of the code on the ECE Kamek Virtual Machine. Also, Brick sort is graphed separately as it takes significantly more time than the other sorts. 
 
-### Performance as Dataset Size Increases for Bitonic, Merge, Quick, and Radix Sorts
+### Performance as Dataset Size Increases for Bitonic, Merge, Quick, and Radix Sorts (8 threads)
 ![Performance on increasingly sized datasets](/graphs/8threadsorting.png)
 
 #### Key
 Red: Bitonic, Green: Merge, Orange: Quick, Black: Radix
 
-### Performance as Dataset Size Increases for Brick Sort
+### Performance as Dataset Size Increases for Brick Sort (8 threads)
 ![Performance on increasingly sized datasets](/graphs/bricksorting.png)
 
 #### Key
@@ -57,13 +57,13 @@ Purple: Brick
 
 As the size of the dataset doubles, our runtime approximately doubles for Bitonic, Merge, Quick, Radix while running 8 threads, indicating a near linear time complexity. For brick sort, the line appears to be nonlinear, indicating a nonlinear time complexity.
 
-### Performance as Number of Threads Increases for Bitonic, Merge, Quick, and Radix Sorts
+### Performance as Number of Threads Increases for Bitonic, Merge, Quick, and Radix Sorts (150,000 elements)
 ![Performance as threads increase](/graphs/sort150.png)
 
 #### Key
 Red: Bitonic, Green: Merge, Orange: Quick, Black: Radix
 
-### Performance as Number of Threads Increases for Brick Sort
+### Performance as Number of Threads Increases for Brick Sort (150,000 elements)
 ![Performance as threads increase](/graphs/bricksort150.png)
 
 #### Key
