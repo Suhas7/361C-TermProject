@@ -46,11 +46,13 @@ Note: Each plotted time is the average of 5 executions of the code on the ECE Ka
 ### Performance as Dataset Size Increases for Bitonic, Merge, Quick, and Radix Sorts
 ![Performance on increasingly sized datasets](/graphs/8threadsorting.png)
 
+#### Key
 Red: Bitonic, Green: Merge, Orange: Quick, Black: Radix
 
 ### Performance as Dataset Size Increases for Brick Sort
 ![Performance on increasingly sized datasets](/graphs/bricksorting.png)
 
+#### Key
 Purple: Brick
 
 As the size of the dataset doubles, our runtime approximately doubles for Bitonic, Merge, Quick, Radix while running 8 threads, indicating a near linear time complexity. For brick sort, the line appears to be nonlinear, indicating a nonlinear time complexity.
@@ -58,11 +60,13 @@ As the size of the dataset doubles, our runtime approximately doubles for Bitoni
 ### Performance as Number of Threads Increases for Bitonic, Merge, Quick, and Radix Sorts
 ![Performance as threads increase](/graphs/sort150.png)
 
+#### Key
 Red: Bitonic, Green: Merge, Orange: Quick, Black: Radix
 
 ### Performance as Number of Threads Increases for Brick Sort
 ![Performance as threads increase](/graphs/bricksort150.png)
 
+#### Key
 Purple: Brick
 
 As the number of threads increases, the runtime for sorting decreases, but with diminishing returns.
