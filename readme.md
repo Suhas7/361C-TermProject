@@ -33,7 +33,8 @@ Bitonic sort operates by breaking the array into a series of bitonic sequences (
 Merge sort is a divide and conquer sorting algorithm. It divides a given array into many subsequences and merges them together in ascending order. When implemented sequentially merge sort has O(n * log n) time complexity, but with n threads in parallel has O(log n) time complexity. 
 
 ### Radix Sort
-Radix sort iterates from the least significant bit to the most significant bit, and at each iteration, sorts elements based only on the corresponding bit. By preserving the order from previous iterations when the current iteration is processed, the resulting array maintains the work of prior iterations and becomes increasingly sorted. Radix sorts complexity is dependent both on the number of bits it must consider as well as the number of elements, with O(bn) time.
+Radix sort iterates from the least significant bit to the most significant bit, and at each iteration, sorts elements based only on the corresponding bit. By preserving the order from previous iterations when the current iteration is processed, the resulting array maintains the work of prior iterations and becomes increasingly sorted. Radix sorts complexity is dependent both on the number of bits it must consider as well as the number of elements. Radix sort has O(d * (n + b)) where n is the number of elements, d is the number of possible digits to consider, and b is the base representation for the elements. When implemented in parallel, the time complexity is 
+O(d * (log n + b)). 
 
 ### Quick Sort
 Quick sort is a divide and conquer algorithm that uses pivots. A pivot is just an element in the array that is being sorted. Quick sort recursively ensures that all the elements to the right of the pivot are larger than the pivot, and all elements to the left of the pivot are smaller than the pivot. When imlemented sequentially, quick sort has O(n * log n) time complexity. 
